@@ -1,4 +1,5 @@
-# Carrito_de_la_Compra
+# Carrito de la Compra
+
 Creacion de un Carrito de la compra para la asignatura de DI de 2º DAM
 
 Actividad realizada por:
@@ -21,7 +22,8 @@ productos y el precio total de dicha compra o carrito. Cada vez que se pulsa, ad
 - Con el botón “Restablecer” se resetean todas las cajas de texto para poder introducir un nuevo producto. La caja para el nombre del artículo recibe el foco para facilitar la entrada de datos. Inicializa la caja “Precio total del carrito” a 0 para facilitar las operaciones aritméticas. 
  
 
-Se pide: 
+Se pide:
+<br>
 1-  Escribe el contenido html de la página web. 
 2-  Realiza toda la lógica del programa en un archivo js externo. 
 3-  Aplica estilos mediante una hoja css externa.
