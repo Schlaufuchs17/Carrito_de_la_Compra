@@ -25,5 +25,7 @@ productos y el precio total de dicha compra o carrito. Cada vez que se pulsa, ad
 Se pide:
 <br>
 1-  Escribe el contenido html de la página web. 
-2-  Realiza toda la lógica del programa en un archivo js externo. 
+<br>
+2-  Realiza toda la lógica del programa en un archivo js externo.
+<br>
 3-  Aplica estilos mediante una hoja css externa.
