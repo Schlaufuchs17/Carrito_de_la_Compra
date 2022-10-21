@@ -1,0 +1,90 @@
+*{
+	box-sizing:content-box;
+	
+}
+
+h1{
+    color: #0a00668c;
+    font-size:25px;
+    text-indent: 8%;
+    margin: center;
+}
+
+/*CUADRO DE DATOS*/
+body{
+    background: #f6f8f6; /*Color de fondo*/
+    font-weight: bold; /*Grueso de la fuente*/
+    padding: 0 1.5em; /*Espacio de relleno*/
+    place-items: center center; /*Alineacion*/
+    font-family: sans Verdana, Tahoma, sans-serif;/*Tipo de fuente, siempre poner genericas a ser posible para que cualquier navegador lo lea sin problema*/
+
+	/*Fondo de pantalla para que quede mas resulton*/
+	background-image: url(wallpaper.jpg); /*Ruta*/
+    background-position: center center; /*Alineacion del wallpaper*/
+    background-attachment: fixed; /*Poner el wallpaper de forma fija*/
+}
+
+/*FORMULARIO DE ENTRADA*/
+form{ 
+	background-color:rgba(110, 135, 245, 0.541); /*AZUL SI EL FONDO SE MANTIENE EL DE PRUEBA*/
+	width: 500px;
+	padding:30px;
+	border-radius:20px;
+	margin:auto;
+}
+
+form input[type="text"], 
+
+/*PROPIEDADES CUADRO DE TEXTO*/
+form select{
+	width: 450px;
+	padding:3px 30px;
+	border:1px solid #000000; /*Poner el reborde en negro, queda mejor con el fondo del cuadro, revisar si se cambia el cuadro de texto*/
+	border-radius:3px;
+	margin:8px 0;
+	background-color:#f6f6f6; /*Fondo en blanco*/
+	display:inline-block;   
+}
+
+form input[type="number"]{
+    width:50px;
+	padding:3px 10px;
+	border:1px solid #030303;
+	border-radius:3px;
+	background-color:#fafafa;
+	margin:8px 0;
+	display:inline-block;
+    
+}
+
+input[type="button"]{
+   
+	border:none;
+	border-radius: 15px;
+	display: inline;
+	font-weight: bold;
+	cursor: pointer;
+	opacity: 1;
+	outline: 2px solid #f6f6f6;
+	outline-offset: 2px;
+
+}
+
+#restablecer{
+	position: relative;
+	left:10px;
+}
+
+input[type="button"]:hover:enabled{
+    transition: all .6s ease;
+	background-color: rgba(75, 238, 116, 0.685); /*COLOR DE FONDO DEL BOTON "IMPRIMIR/RESTABLECER/AÑADIR AL CARRITO"*/
+	outline: 2px solid rgba(0, 0, 0, 0.685);
+	color:white;
+}
+
+span {
+    color: rgba(0,0,0,0.4);
+    opacity: 1;
+    font-weight: bold;
+    transition: all .5s ease;
+}

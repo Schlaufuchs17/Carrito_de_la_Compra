@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="CodigoJava.js"></script> <!--enlace a JS, REVISAR-->
+    <link rel="stylesheet" href="Estilo.css"> <!--Enlace a CSS-->
+
+<body>
+    <div id="carrito" >
+        <form id="formulario">
+            Nombre del artículo: <input type="text" id="nombre"/><span id="errorNombre">
+            </span>
+
+            <br/><br/>
+
+            Precio del artículo: <input type="text" id="precio"/><span id="errorPrecio">
+            </span>
+            
+            <br/><br/>
+
+            Unidades: <input type="number" id="unidades" value="1" min="1"/>
+            
+            <br/><br/>
+
+            <input type="button" value="Añadir al carrito" id="botonAñadir"/>
+            
+            <br/><br/>
+              
+            Artículos en el carrito: <input type="text" id="articulosCarrito"/>
+            
+            <br/><br/>
+
+            Importe total del carrito: <input type="text" id="precioTotal"/>
+            
+            <br/><br/>
+
+            Forma de pago: <select id="pago">
+                                <option value="Seleccione">--Seleccione--</option>
+                                <option value="tarjeta" id="tarjeta">Tarjeta</option>
+                                <option value="efectivo" id="efectivo">Efectivo</option>
+                           </select>
+
+            <br/><br/>
+            
+            <!--FORMA DE PAGO-->
+            <div id="pagoTarjeta" class="animate__animated animate__zoomIn">
+                Titular tarjeta: <input type="text" id="nombreTarjeta"/><span id="errorTitular">
+                </span>
+                
+                <br/><br/>
+
+                Numero de tarjeta: <input type="text" id="numTarjeta"/><span id="errorTarjeta">
+                </span>
+
+                <br/><br/>
+
+                CVV: <input type="text" id="cvv"/><span id="errorCvv">
+                </span>
+                
+                <br/><br/>
+
+            </div> 
+
+            <div id="pagoEfectivo" class="animate__animated animate__zoomIn">
+                Efectivo introducido: <input type="text" id="importeEfectivo"/><span id="errorEfectivo">
+                </span>
+                
+                <br/><br/>  
+
+            </div>
+
+            <!--ACEPTAR TERMINOS Y CONDICIONES-->
+            <div id="aceptarPago">
+                <input type="checkbox" id="condiciones" value="aceptar">
+                <label>Acepto las condiciones de compra</label>
+                
+                <br/><br/>
+            
+                <input type="button" value="Imprimir" id="imprimir"/>
+                <input type="button" value="Restablecer" id="restablecer"/>
+                
+                <br/><br/>
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>
