@@ -5,22 +5,23 @@ var botonAñadir;
 var articulosCarrito;
 var precioTotal;
 var pago;
-var pagoTarjeta;
-var pagoEfectivo;
 var condiciones;
 var imprimir;
 var restablecer;
 var aceptarPago;
 var sumaPrecio;
 var sumaTotal = 0 ;
-var errorTitular;
-var errorTarjeta;
-var errorCvv;
-var nombreTarjeta;
-var numTarjeta;
-var cvv;
+var pagoEfectivo;
 var importeEfectivo;
 var errorEfectivo;
+var errorTitular;
+var pagoTarjeta;
+var nombreTarjeta;
+var numTarjeta;
+var errorTarjeta;
+var cvv;
+var errorCvv;
+
 
 /*PATRON PARA QUE SOLO ACEPTE NUMEROS Y LETRAS DONDE CORRESPONDA*/
 let validarPrecio = /^\d+([,.]\d{1,4})?$/; // Que acepte numeros entre 1-4 cifras
@@ -71,7 +72,7 @@ function validarArticulo(){
 /*VALIDACION DE PAGO */
 function validarPago(){
     
-    let validarNumero = /^\d{16}$/; //Hay que poner 16 cifras en el numero de tarjeta, los que hay en la realidad
+    let validarNumero = /^\d{16}$/; //Hay que poner 16 cifras en el numero de tarjeta, los que hay en la realidad, lo contrario da error
     let validarCvv = /^\d{3}$/; //Tres cifras del CVV
     var error = 0;
 
@@ -168,7 +169,7 @@ function imprimirPago(){
             alert("Faltan "+(precioTotal.value-importeEfectivo.value)+"€"); 
         }
         
-        /*CALCULAR EL CAMBIO -------REVISAR POR SI NO LO HACE BIEN------- */
+        /*CALCULAR EL CAMBIO*/
         else{
             alert("Los artículos son: " + articulosCarrito.value +"\n El precio total es: "
             + precioTotal.value +"€" + "\nForma de pago: "+ pago.value+"\nCambio: " +(importeEfectivo.value-precioTotal.value)+"€");
@@ -232,14 +233,14 @@ function inicializar(){
     condiciones = document.getElementById("condiciones");
     imprimir = document.getElementById("imprimir");
     restablecer = document.getElementById("restablecer");   
-    pagoTarjeta = document.getElementById("pagoTarjeta");
     pagoEfectivo = document.getElementById("pagoEfectivo");
     aceptarPago = document.getElementById("aceptarPago");
+    pagoTarjeta = document.getElementById("pagoTarjeta");
+    nombreTarjeta = document.getElementById("nombreTarjeta");
+    numTarjeta = document.getElementById("numTarjeta");
     errorTitular = document.getElementById("errorTitular");
     errorTarjeta = document.getElementById("errorTarjeta");
     errorCvv = document.getElementById("errorCvv");
-    nombreTarjeta = document.getElementById("nombreTarjeta");
-    numTarjeta = document.getElementById("numTarjeta");
     cvv = document.getElementById("cvv");
     importeEfectivo = document.getElementById("importeEfectivo");
     errorEfectivo = document.getElementById("errorEfectivo");
@@ -255,7 +256,7 @@ function inicializar(){
     precioTotal.disabled=true;
 }
 
-/*ACTIVADOR DE CONDICIONES */
+/*ACTIVADOR CONDICIONES */
 function activadorCondiciones(){
     if(condiciones.checked == true){
         imprimir.disabled = false;

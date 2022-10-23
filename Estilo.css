@@ -16,7 +16,7 @@ body{
     font-weight: bold; /*Grueso de la fuente*/
     padding: 0 1.5em; /*Espacio de relleno*/
     place-items: center center; /*Alineacion*/
-    font-family: sans Verdana, Tahoma, sans-serif;/*Tipo de fuente, siempre poner genericas a ser posible para que cualquier navegador lo lea sin problema*/
+    font-family: sans Verdana, Tahoma, sans-serif;/*Tipo de fuente*/
 
 	/*Fondo de pantalla para que quede mas resulton*/
 	background-image: url(wallpaper.jpg); /*Ruta*/
